@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="icon" href="/public/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<nav class="bg-light sticky-top">
+    <div class="container">
+        <div class="navbar navbar-expand-lg bg-light">
+            <a class="logo" href="/home">
+                <img src="http://primefitnessgyms.com/wp-content/uploads/2018/03/Prime-Fitnessold.png" class="" alt="">
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link  active-page" href="/home">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown1" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            DỊCH VỤ
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/group-ex">THỂ DỤC NHÓM</a>
+                            <a class="dropdown-item" href="/fitness">THỂ HÌNH</a>
+                            <a class="dropdown-item" href="/swim">BƠI LỘI</a>
+                            <a class="dropdown-item" href="/yoga">YOGA</a>
+                            <a class="dropdown-item" href="/kick-fit">KICKFIT & MMA</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown2" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            HỘI VIÊN
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/membership">QUYỀN LỢI HỘI VIÊN</a>
+                            <a class="dropdown-item" href="/gallery">CÂU CHUYÊN THÀNH CÔNG</a>
+                            <a class="dropdown-item" href="/about-us">VỀ CHÚNG TÔI</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/coach">HUẤN LUYỆN VIÊN</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/package" id="navbarDropdown2"
+                           role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            GÓI TẬP
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/package/group-ex">THỂ DỤC NHÓM</a>
+                            <a class="dropdown-item" href="/package/fitness">THỂ HÌNH</a>
+                            <a class="dropdown-item" href="/package/swim">BƠI LỘI</a>
+                            <a class="dropdown-item" href="/package/yoga">YOGA</a>
+                            <a class="dropdown-item" href="/package/kick-fit">KICKFIT & MMA</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/news/1">TIN TỨC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="d-inline list-added text-dark" id="added-quantity">0</div>
+                            GIỎ HÀNG
+                        </a>
+                    </li>
+                    <button class="btn btn-outline-danger" type="button" data-toggle="modal"
+                            data-target="#register-modal">
+                        ĐĂNG KÝ TẬP THỬ
+                    </button>
+                </ul>
+            </div>
+            <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <div class="show-menu-btn">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </svg>
+                    </a>
+            </span>
+        </div>
+    </div>
+</nav>
+<div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <ul class="navbar-nav">
+        <li class="nav-item ">
+            <a class="nav-link  active-page" href="/home">TRANG CHỦ</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown1" role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                DỊCH VỤ
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/group-ex">THỂ DỤC NHÓM</a>
+                <a class="dropdown-item" href="/fitness">THỂ HÌNH</a>
+                <a class="dropdown-item" href="/swim">BƠI LỘI</a>
+                <a class="dropdown-item" href="/yoga">YOGA</a>
+                <a class="dropdown-item" href="/kick-fit">KICKFIT & MMA</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown2" role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                HỘI VIÊN
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/membership">QUYỀN LỢI HỘI VIÊN</a>
+                <a class="dropdown-item" href="/gallery">CÂU CHUYÊN THÀNH CÔNG</a>
+                <a class="dropdown-item" href="/about-us">VỀ CHÚNG TÔI</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/coach">HUẤN LUYỆN VIÊN</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/package" id="navbarDropdown2"
+               role="button"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                GÓI TẬP
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/package/group-ex">THỂ DỤC NHÓM</a>
+                <a class="dropdown-item" href="/package/fitness">THỂ HÌNH</a>
+                <a class="dropdown-item" href="/package/swim">BƠI LỘI</a>
+                <a class="dropdown-item" href="/package/yoga">YOGA</a>
+                <a class="dropdown-item" href="/package/kick-fit">KICKFIT & MMA</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/news/1">TIN TỨC</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="/cart">
+                <i class="fas fa-shopping-cart"></i>
+                <div class="d-inline list-added text-dark" id="added-quantity">1</div>
+                GIỎ HÀNG
+            </a>
+        </li>
+        <button class="btn btn-outline-danger" type="button" data-toggle="modal"
+                data-target="#register-modal">
+            ĐĂNG KÝ TẬP THỬ
+        </button>
+    </ul>
+</div>
+<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="box-brand pl-5">
+                    <div><img src="http://primefitnessgyms.com/wp-content/uploads/2018/03/Prime-Fitnessold.png"
+                              alt="Brand">
+                    </div>
+                    <div class="banner">
+                        Fit For Life
+                    </div>
+                </div>
+                <button type="button" id="register-btn-show-modal" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container-fluid">
+                <div class="error">
+                    <div id="summary"></div>
+                    <form action="register/send" method="post" name="register-form" id="register-form">
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="name" placeholder="Họ và tên">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="phone" placeholder="Số điện thoại">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group mt-4">
+                            <textarea class="form-control" name="address" cols="30" rows="5"
+                                      placeholder="Địa chỉ"></textarea>
+                        </div>
+                        <div class="form-group mt-4">
+                            <select class="form-control" name="service">
+                                <option value="Nhập dịch vụ ban muốn tư vấn">Nhập dịch vụ ban muốn tư vấn</option>
+                                <option value="Fitness">Fitness</option>
+                                <option value="Thể dục nhóm">Thể dục nhóm</option>
+                                <option value="Bơi lội">Bơi lội</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Kitfit & MMA">Kitfit & MMA</option>
+                            </select>
+                        </div>
+                        <div class="form-group btn-register-now">
+                            <button type="submit" class="btn btn-danger" id="btn-submit"
+                                    name="btn-submit"
+                                    value="Submit">ĐĂNG KÝ NGAY
+                            </button>
+                        </div>
+                        <div class="text-white font-weight-bold mt-4">* Chúng tôi sẽ liên hệ với bạn trong vòng 24h
+                        </div>
+                        <div class="text-white font-weight-bold mb-4">* Vui lòng đọc kỹ điều kiện sử dụng</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="box-brand pl-5">
+                    <div><img src="http://primefitnessgyms.com/wp-content/uploads/2018/03/Prime-Fitnessold.png"
+                              alt="Brand">
+                    </div>
+                    <div class="banner">
+                        Fit For Life
+                    </div>
+                </div>
+                <button type="button" id="register-btn-show-modal" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="container-fluid">
+                <div class="error">
+                    <div id="summary"></div>
+                    <form action="register/send" method="post" name="register-form" id="register-form">
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="name" placeholder="Họ và tên">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="phone" placeholder="Số điện thoại">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input class="form-control" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-group mt-4">
+                            <textarea class="form-control" name="address" cols="30" rows="5"
+                                      placeholder="Địa chỉ"></textarea>
+                        </div>
+                        <div class="form-group mt-4">
+                            <select class="form-control" name="service">
+                                <option value="Nhập dịch vụ ban muốn tư vấn">Nhập dịch vụ ban muốn tư vấn</option>
+                                <option value="Fitness">Fitness</option>
+                                <option value="Thể dục nhóm">Thể dục nhóm</option>
+                                <option value="Bơi lội">Bơi lội</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Kitfit & MMA">Kitfit & MMA</option>
+                            </select>
+                        </div>
+                        <div class="form-group btn-register-now">
+                            <button type="submit" class="btn btn-danger" id="btn-submit"
+                                    name="btn-submit"
+                                    value="Submit">ĐĂNG KÝ NGAY
+                            </button>
+                        </div>
+                        <div class="text-white font-weight-bold mt-4">* Chúng tôi sẽ liên hệ với bạn trong vòng 24h
+                        </div>
+                        <div class="text-white font-weight-bold mb-4">* Vui lòng đọc kỹ điều kiện sử dụng</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-lg-12 col-sm-12">
+            <a href="#register-modal" data-toggle="modal">
+                <img width="100%" src="/img/1.png" class="img-fluid" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="page-content ">
+    <section class=" register-now">
+        <div class="row">
+            <div class="col-8 d-none d-lg-block">
+                <div class="text-white register-now-title">ĐĂNG KÝ NGAY</div>
+                <div class="text-white register-now-detail">
+                    Trải nghiệm 3 ngày miễn phí toàn bộ dịch vụ
+                </div>
+            </div>
+            <div class="col-lg-4 text-sm-center btn-register-now">
+                <button class="btn btn-danger " type="button" data-toggle="modal"
+                        data-target="#register-modal">
+                    <div>ĐĂNG KÝ NGAY</div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="introduce-1 bg-light">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12 introduce-1-img">
+                <img src="/img/2.png"
+                     alt="">
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <h1 class="introduce-1-detail-1 text-danger text-sm-center">
+                    KHÔNG BỊ BUỒN CHÁN
+                </h1>
+                <h3 class="introduce-1-detail-2">
+                    Khoảng thời gian tập luyện là lúc đầu óc được thư giãn thoải mái
+                </h3>
+                <div>
+                    Vì vậy, việc đến phòng tập với nhiều người sẽ gia tăng sự hào hứng, không bị trì
+                    trệ, các buổi học không tẻ nhạt và im lặng. Đặc biệt với phụ nữ sau sinh muốn giảm cân, khi được tập
+                    nhóm với những người có cùng thể trạng sẽ giúp tạo động lực quyết tâm cao hơn. Nhiều chị em phụ nữ
+                    sau sinh, trong thời gian chăm sóc con nhỏ thường ít ra ngoài, ít gặp gỡ bạn bè và tham gia vào các
+                    hoạt động tập thể, dễ gây buồn chán, trầm cảm.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="introduce-2">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12">
+                <h1 class="introduce-2-detail-1 text-danger text-sm-center">
+                    LƯỜI BIẾNG
+                </h1>
+                <h3 class="introduce-2-detail-2">
+                    Tập thể dục nhóm để khắc phục bệnh lười
+                </h3>
+                <div>
+                    Nếu tập một mình, bạn rất nhanh nản chí và không đề cao kỷ luật với bản thân, đi tập lúc nào cũng
+                    được,
+                    không đi tập cũng không sao. Nhưng khi tập nhóm, bạn sẽ cảm thấy có trách nhiệm hơn về sự hiện diện
+                    của
+                    mình tại lớp học, tâm lý sẽ “ngại nghỉ” hơn, và không bị oải khi nghĩ đến việc đến phòng tập một
+                    mình.
+                    Rủ bạn bè đi tập cùng cũng là động lực và “chống lười” hiệu quả.
+                </div>
+            </div>
+            <div class="col-lg-7 col-sm-12 introduce-2-img">
+                <img src="/img/3.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="introduce-1 bg-light">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12 introduce-1-img">
+                <img src="/img/4.png"
+                     alt="">
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <h1 class="introduce-1-detail-1 text-danger text-sm-center">
+                    GIẢM CÂN
+                </h1>
+                <h3 class="introduce-1-detail-2">
+                    Tập thể dục nhóm để quyết tâm giảm cân hơn
+                </h3>
+                <div class="">
+                    Khi tập luyện cùng một nhóm bạn sẽ dễ dàng nhìn thấy sự khác biệt trong kết quả tập luyện của mỗi
+                    người.
+                    Nếu bạn giảm cân chậm hơn so với bạn tập, bạn sẽ sốt ruột và quyết tâm chăm chỉ hơn. Ngoài ra, khi
+                    tập
+                    cùng nhiều người, bạn sẽ dễ dàng trao đổi thông tin về chế độ dinh dưỡng, tìm hiểu sao người này
+                    giảm
+                    cân nhanh và người kia thì không mặc dù tập luyện như nhau.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="introduce-2">
+        <div class="row">
+            <div class="col-lg-5 col-sm-12">
+                <h1 class="introduce-2-detail-1 text-danger text-sm-center">
+                    TIẾT KIỆM
+                </h1>
+                <h3 class="introduce-2-detail-2">
+                    Tập thể dục nhóm để giảm chi phí
+                </h3>
+                <div>
+                    Đây là điều thiết thực nhất vì các lớp học nhóm luôn có chi phí mềm hơn so với các lớp học riêng cá
+                    nhân. Cùng một thời lượng tập luyện nhưng học phí được chia ra cho nhiều người hơn, đây là điều
+                    thuận
+                    lợi cho những người muốn có được lớp học chất lượng với chi phí hợp lý.
+                </div>
+            </div>
+            <div class="col-lg-7 col-sm-12 introduce-2-img">
+                <img src="https://www.nautilusplus.com/content/uploads/2012/06/exercise-group-class_iStock_000017017268Small.jpg"
+                     alt="">
+            </div>
+        </div>
+    </section>
+    <section class=" register-now">
+        <div class="row">
+            <div class="col-8 d-none d-lg-block">
+                <div class="text-white register-now-title">ĐĂNG KÝ NGAY</div>
+                <div class="text-white register-now-detail">
+                    Trải nghiệm 3 ngày miễn phí toàn bộ dịch vụ
+                </div>
+            </div>
+            <div class="col-lg-4 text-sm-center btn-register-now">
+                <button class="btn btn-danger " type="button" data-toggle="modal"
+                        data-target="#register-modal">
+                    <div>ĐĂNG KÝ NGAY</div>
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class=" bg-dark">
+    <div class="box-brand col-lg-3 text-sm-center pr-5 d-lg-none d-sm-block">
+        <div class="banner">
+            Fit For Life
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-sm-12 box-brand-bug">
+            <div class="box-bug">
+                <h3 class="text-sm-center">Liên kết</h3>
+                <ul class="col-sm-12 ">
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Góp ý - Phản hồi</a></li>
+                    <li><a href="#">Điều kiện sử dụng</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-service col-lg-3 col-sm-12">
+            <h3 class="text-sm-center">Dịch vụ</h3>
+            <ul>
+                <li><a href="group-ex.ejs">Thể dục nhóm</a></li>
+                <li><a href="fitness.ejs">Thể hình</a></li>
+                <li><a href="swim.ejs">Bơi lội</a></li>
+                <li><a href="yoga.ejs">Yoga</a></li>
+                <li><a href="kick-fit.ejs">Kickfit & MMA</a></li>
+            </ul>
+        </div>
+        <div class="box-Contact col-lg-3 col-sm-12 text-sm-center">
+            <h3>HOTLINE</h3>
+            <div class="number"><a href="#">0793245698</a></div>
+            <div class="row">
+                <div class="pl-lg-3 col-sm-12">
+                    <a class="" href="https://www.facebook.com/nam.n.noi.3">
+                        <i class="fab fa-facebook-square fa-3x mr-2"></i>
+                    </a>
+                    <a class="" href="https://twitter.com/">
+                        <i class=" fab fa-twitter-square fa-3x mr-2 "></i>
+                    </a>
+                    <a class="" href="https://www.instagram.com/__phnam__/">
+                        <i class="fab fa-instagram fa-3x mr-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box-brand col-lg-3 d-none d-lg-block pr-5">
+            <div><img src="http://primefitnessgyms.com/wp-content/uploads/2018/03/Prime-Fitnessold.png" alt="Brand">
+            </div>
+            <div class="banner">
+                Fit For Life
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/library/jquery-3.3.1.min.js"></script>
+<script src="/library/bootstrap.min.js"></script>
+<script src="/library/jquery.validate.min.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/quantity-added.js"></script>
+<script src="/js/responsive.js"></script>
+</body>
+</html>

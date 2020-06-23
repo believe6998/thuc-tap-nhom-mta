@@ -1,0 +1,30 @@
+{
+  "name": "project-sem-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namphth1807043/project-sem-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namphth1807043/project-sem-1/issues"
+  },
+  "homepage": "https://github.com/namphth1807043/project-sem-1#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "cloudinary": "^1.13.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
+    "express-fileupload": "^1.1.1-alpha.2",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.4.12",
+    "numeral": "^2.0.6"
+  }
+}
