@@ -1,12 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fileUpload = require('express-fileupload');
-var cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary');
 const app = express();
 const mongoose = require('mongoose');
 const favicon = require('express-favicon');
-mongoose.connect('mongodb://admin:admin123@ds015892.mlab.com:15892/project-sem-1', {useNewUrlParser: true});
-
+mongoose.connect(
+    'mongodb://admin:admin123@ds015892.mlab.com:15892/project-sem-1',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
 cloudinary.config({
     cloud_name: 'namphth1807043',
     api_key: '177312665915999',

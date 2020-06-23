@@ -43,7 +43,7 @@ exports.listPackage = function (req, res) {
 
 };
 exports.generatePackage = function (req, res) {
-    Package.find({'category': new RegExp('^' + 'Fitness' + '$', "i")}, function (err, list) {
+    Package.find({}, function (err, list) {
         res.render("client/package.ejs", {
             "listPackage": list
         });
