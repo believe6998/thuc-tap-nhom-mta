@@ -27,7 +27,7 @@ exports.routing = function (app) {
     app.get("/coach", coachController.generateCoach);
     app.get("/news/:page", newsController.generateNews);
     app.get("/about-us", aboutUsController.generateAboutus);
-    app.get("/package", packageController.generatePackage);
+    app.get("/package/:page", packageController.generatePackage);
     app.get("/package/yoga", packageController.generatePackageYoga);
     app.get("/package/swim", packageController.generatePackageSwim);
     app.get("/package/fitness", packageController.generatePackageFitness);
@@ -35,7 +35,7 @@ exports.routing = function (app) {
     app.get("/package/kick-fit", packageController.generatePackageKickfit);
     app.get("/cart", packageController.generateCart);
 
-    //admin
+    // admin
     app.get("/admin", adminController.generateAdmin);
 
     // customer
@@ -48,28 +48,28 @@ exports.routing = function (app) {
 
 
 
-    //news
+    // news
     app.get("/admin/news/list", newsController.listNews);
     app.get("/admin/news/form", newsController.generateNewsForm);
     app.post("/admin/news/save", newsController.saveNews);
     app.get("/admin/news/:id/delete", newsController.deleteNews);
     app.post("/admin/news/:id/update", newsController.updateNews);
 
-    //gallery
+    // gallery
     app.get("/admin/gallery/list", galleryController.listGallery);
     app.get("/admin/gallery/form", galleryController.generateGalleryForm);
     app.post("/admin/gallery/save", galleryController.saveGallery);
     app.get("/admin/gallery/:id/delete", galleryController.deleteGallery);
     app.post("/admin/gallery/:id/update", galleryController.updateGallery);
 
-    //coachs
+    // coach
     app.get("/admin/coach/list", coachController.listCoach);
     app.get("/admin/coach/form", coachController.generateCoachForm);
     app.post("/admin/coach/save", coachController.saveCoach);
     app.get("/admin/coach/:id/delete", coachController.deleteCoach);
     app.post("/admin/coach/:id/update", coachController.updateCoach);
 
-    //package
+    // package
     app.get("/admin/package/list", packageController.listPackage);
     app.get("/admin/package/form", packageController.generatePackageForm);
     app.post("/admin/package/save", packageController.savePackage);

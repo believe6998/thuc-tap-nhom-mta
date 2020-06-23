@@ -60,7 +60,7 @@ exports.generateNews = function (req, res, next) {
 };
 
 exports.deleteNews = function (req, res) {
-    Tiding.findByIdAndRemove(  myid(req.params.id), function(err) {
+    Tiding.findByIdAndRemove(myid(req.params.id), function(err) {
         if (err)
             res.send(err);
         else

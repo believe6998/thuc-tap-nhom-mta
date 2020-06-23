@@ -42,14 +42,36 @@ exports.listPackage = function (req, res) {
     });
 
 };
-exports.generatePackage = function (req, res) {
-    Package.find({}, function (err, list) {
-        res.render("client/package.ejs", {
-            "listPackage": list
-        });
-    });
 
+// exports.generatePackage = function (req, res) {
+//     Package.find({}, function (err, list) {
+//         res.render("client/package.ejs", {
+//             "listPackage": list
+//         });
+//     });
+
+// };
+
+exports.generatePackage = function(req, res, next){
+    var perPage = 6;
+    var page = req.params.page || 1;
+
+    Package
+    .find({})
+    .skip((perPage * page) - perPage)
+    .limit(perPage)
+    .exec(function(err, list) {
+        Package.count().exec(function(err, count) {
+            if (err) return next(err)
+            res.render('client/package.ejs', {
+                "listPackage": list,
+                current: page,
+                pages: Math.ceil(count / perPage)
+            })
+        })
+    })
 };
+
 
 exports.generatePackageYoga = function (req, res) {
     Package.find({'category': new RegExp('^' + 'Yoga' + '$', "i")}, function (err, list) {
@@ -77,6 +99,7 @@ exports.generatePackageFitness = function (req, res) {
     });
 
 };
+
 exports.generatePackageKickfit = function (req, res) {
     Package.find({'category': new RegExp('^' + 'Kickfit' + '$', "i")}, function (err, list) {
         res.render("client/package.ejs", {
@@ -85,6 +108,7 @@ exports.generatePackageKickfit = function (req, res) {
     });
 
 };
+
 exports.generatePackageGroup = function (req, res) {
     Package.find({'category': new RegExp('^' + 'Group-Ex' + '$', "i")}, function (err, list) {
         res.render("client/package.ejs", {
